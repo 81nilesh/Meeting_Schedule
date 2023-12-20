@@ -1,8 +1,8 @@
 // Dummy meeting data for testing
 const availableSlots = [
-    { id: 1, date: '2023-09-25', time: '09:00:00', booked: 0 },
-    { id: 2, date: '2023-09-25', time: '10:00:00', booked: 1 },
-    { id: 3, date: '2023-09-26', time: '09:00:00', booked: 0 },
+    { id: 1, date: '2023-12-20', time: '09:00:00', booked: 0 },
+    { id: 2, date: '2023-12-21', time: '10:00:00', booked: 1 },
+    { id: 3, date: '2023-12-22', time: '09:00:00', booked: 0 },
     // Add more dummy data as needed
 ];
 
@@ -21,11 +21,10 @@ function fetchMeetingData() {
             <td>${meeting.time}</td>
             <td>${meeting.booked ? 'Booked' : 'Available'}</td>
             <td>
-                ${
-                    meeting.booked
-                        ? `<button class="cancel-button" data-id="${meeting.id}">Cancel</button>`
-                        : `<button class="book-button" data-id="${meeting.id}">Book Now</button>`
-                }
+                ${meeting.booked
+                ? `<button class="cancel-button" data-id="${meeting.id}">Cancel</button>`
+                : `<button class="book-button" data-id="${meeting.id}">Book Now</button>`
+            }
             </td>
         `;
 
